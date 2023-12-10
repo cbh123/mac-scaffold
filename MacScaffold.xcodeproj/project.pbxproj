@@ -11,6 +11,8 @@
 		5C10C9F72B26667C000B1BA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10C9F62B26667C000B1BA6 /* ContentView.swift */; };
 		5C10C9F92B26667F000B1BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C10C9F82B26667F000B1BA6 /* Assets.xcassets */; };
 		5C10C9FC2B26667F000B1BA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C10C9FB2B26667F000B1BA6 /* Preview Assets.xcassets */; };
+		5C10CA052B26697E000B1BA6 /* Replicate in Frameworks */ = {isa = PBXBuildFile; productRef = 5C10CA042B26697E000B1BA6 /* Replicate */; };
+		5C10CA072B267328000B1BA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C10CA062B267328000B1BA6 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		5C10C9F82B26667F000B1BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C10C9FB2B26667F000B1BA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C10C9FD2B26667F000B1BA6 /* MacScaffold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacScaffold.entitlements; sourceTree = "<group>"; };
+		5C10CA062B267328000B1BA6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C10CA052B26697E000B1BA6 /* Replicate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				5C10C9F42B26667C000B1BA6 /* MacScaffoldApp.swift */,
 				5C10C9F62B26667C000B1BA6 /* ContentView.swift */,
+				5C10CA062B267328000B1BA6 /* SettingsView.swift */,
 				5C10C9F82B26667F000B1BA6 /* Assets.xcassets */,
 				5C10C9FD2B26667F000B1BA6 /* MacScaffold.entitlements */,
 				5C10C9FA2B26667F000B1BA6 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = MacScaffold;
+			packageProductDependencies = (
+				5C10CA042B26697E000B1BA6 /* Replicate */,
+			);
 			productName = MacScaffold;
 			productReference = 5C10C9F12B26667C000B1BA6 /* MacScaffold.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 5C10C9E82B26667C000B1BA6;
+			packageReferences = (
+				5C10CA032B26697D000B1BA6 /* XCRemoteSwiftPackageReference "replicate-swift" */,
+			);
 			productRefGroup = 5C10C9F22B26667C000B1BA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C10CA072B267328000B1BA6 /* SettingsView.swift in Sources */,
 				5C10C9F72B26667C000B1BA6 /* ContentView.swift in Sources */,
 				5C10C9F52B26667C000B1BA6 /* MacScaffoldApp.swift in Sources */,
 			);
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C10CA032B26697D000B1BA6 /* XCRemoteSwiftPackageReference "replicate-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/replicate/replicate-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.19.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C10CA042B26697E000B1BA6 /* Replicate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C10CA032B26697D000B1BA6 /* XCRemoteSwiftPackageReference "replicate-swift" */;
+			productName = Replicate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C10C9E92B26667C000B1BA6 /* Project object */;
 }
